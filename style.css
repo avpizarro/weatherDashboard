@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+}
+
+header { 
+    height: 80px;
+    background-color: rgb(44, 44, 44);
+    text-align: center;
+    color: rgb(224, 224, 223);
+    line-height: 80px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.pure-u-1-4 {
+    height: 500px;
+    background-color: #eee;
+}
+
+form {
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.cityChoice {
+    margin-bottom: 20px;
+}
+
+label{
+    font-weight: bold;
+    font-size: 18px;
+}
+input {
+    display: flex;
+    width: calc(100% - 21.2px);
+    margin-top: 10px;
+}
+button {
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+    height: 34px;
+    line-height: 32px;
+}
+
+.fas {
+    left: 10px;
+    bottom: 10px;
+    position: absolute;
+} 
+
+.pure-u-3-4 {
+    margin: auto;
+}
+
+.todayResult {
+    height: 300px;
+    margin:20px;
+    margin-left: 15px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: #ccc;
+}
+
+.label5Day {
+    margin-left: 15px;
+}
+
+.fiveDayForecast {
+    height: 200px;
+}
+
+.pure-u-1-5 {
+    background-color: rgb(15, 116, 240);
+    height: 80%;
+    width: 15%;
+    border-radius: 4px;
+    margin: 15px;
+    color: rgb(224, 224, 223);
+}
+
