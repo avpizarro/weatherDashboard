@@ -109,6 +109,34 @@ ul {
 li {
     margin-top: 5px;
 }
+
+span {
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 4px;
+    color: black;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.red {
+    background-color: red;
+}
+
+.purple {
+    background-color: purple;
+}
 .label5Day {
     margin-left: 15px;
 }
