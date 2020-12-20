@@ -5,6 +5,7 @@ body {
 
 header { 
     height: 80px;
+    width: 100%;
     background-color: rgb(44, 44, 44);
     text-align: center;
     color: rgb(224, 224, 223);
@@ -14,7 +15,7 @@ header {
 }
 
 .pure-u-1-4 {
-    height: 500px;
+    height: 400px;
     background-color: #eee;
 }
 
@@ -50,13 +51,30 @@ button {
     position: absolute;
 } 
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 4px;
+}
+
+tbody {
+    border-radius: 4px;
+
+}
+
+tr {
+    background-color: white;
+    height: 36px;
+}
+
 .pure-u-3-4 {
     margin: auto;
 }
 
 .todayResult {
-    height: 300px;
-    margin:20px;
+    height: 208px;
+    margin:10px;
+    margin-top: 0;
     margin-left: 15px;
     border: 1px;
     border-style: solid;
@@ -69,15 +87,17 @@ button {
 }
 
 .fiveDayForecast {
-    height: 200px;
+    height: 129px;
 }
 
 .pure-u-1-5 {
     background-color: rgb(15, 116, 240);
-    height: 80%;
-    width: 15%;
+    height: 108%;
+    width: 16%;
     border-radius: 4px;
-    margin: 15px;
+    margin: 5px;
+    margin-left: 15px;
+    margin-bottom: 0;
     color: rgb(224, 224, 223);
 }
 

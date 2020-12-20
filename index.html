@@ -2,44 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Link pure.css  -->
     <meta name="viewport" content="width=device-width, initial-scale=1">   
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Weather Dashboard</title> 
-    <script src="https://kit.fontawesome.com/54099578c7.js" crossorigin="anonymous"></script>  
 
+    <!-- Link own css file -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Weather Dashboard</title> 
+
+    <!-- Link font awesome to use the search icon -->
+    <script src="https://kit.fontawesome.com/54099578c7.js" crossorigin="anonymous"></script>  
+    <script src="https://kit.fontawesome.com/54099578c7.js" crossorigin="anonymous"></script>  
 </head>
 <body>
+    <!-- Define the header -->
     <header class="pure-u-1">Weather Dashboard</header>
+
+    <!-- Define the main content -->
     <div class="pure-g">
+
+        <!-- Create the side column -->
         <div class="pure-u-1-4">
             <form class="pure-form">
+
+                <!-- Add the option to input a City -->
                 <div class="pure-u-1 pure-u-md-1-3 cityChoice">
                     <label for="multi-city">Search for a City:</label>
+
                     <input type="text" id="multi-city" class="pure-u-2-3" />
+
                     <button class="pure-button pure-button-primary pure-u-1-24">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
-                <fieldset class="pure-group">
-                    <input type="text" class="pure-u-1 pure-u-md-1-3"/>
-                    <input type="text" class="pure-u-1 pure-u-md-1-3"/>
-                    <input type="text" class="pure-u-1 pure-u-md-1-3"/>
-                    <input type="text" class="pure-u-1 pure-u-md-1-3"/>
-                    <input type="text" class="pure-u-1 pure-u-md-1-3"/>
-                    <input type="text" class="pure-u-1 pure-u-md-1-3"/>
-                    <input type="text" class="pure-u-1 pure-u-md-1-3"/>
-                    <input type="text" class="pure-u-1 pure-u-md-1-3"/>
-                    <input type="text" class="pure-u-1 pure-u-md-1-3"/>
-                    <input type="text" class="pure-u-1 pure-u-md-1-3"/>
-                </fieldset>
+
+                <!-- Add a table to store the City values inputed -->
+                <table class="pure-table pure-table-bordered">
+                    <tbody>
+                        <tr><td id="1"></td></tr>
+                        <tr><td id="2"></td></tr>
+                        <tr><td id="3"></td></tr>
+                        <tr><td id="4"></td></tr>
+                        <tr><td id="5"></td></tr>
+                        <tr><td id="6"></td></tr>
+                        <tr><td id="7"></td></tr>
+                        <tr><td id="8"></td></tr>
+                    </tbody>
+                </table>
             </form>
+
         </div>
+
+        <!-- Create the left column to display the results -->
         <div class="pure-u-3-4">
+
+            <!-- Element to display todays's weather  -->
             <div class="pure-u-1 pure-u-md-1-3 todayResult">
-               
+                <div id="currentDay"></div>
+                <div id="todayTemp" ></div>
+                <div id="todayHum" ></div>
+                <div id="todayWS" ></div>
+                <div id="todayUV" ></div>
+
             </div>
+
+            <!-- Add a title to the five days forecast -->
             <label for="pure-u-1 pure-u-md-1-3" class="label5Day">5-Day Forecast:</label>
+            
+            <!-- Element to display the weather forecast for the next five days -->
             <div class="pure-u-1 pure-u-md-1-3 fiveDayForecast">
                 <div class="pure-u-1-5">forecast</div>
                 <div class="pure-u-1-5">forecast</div>
@@ -47,12 +78,10 @@
                 <div class="pure-u-1-5">forecast</div>
                 <div class="pure-u-1-5">forecast</div>
             </div>
-            </div>
-
-
-
-
         </div>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="script.js"></script>
 </html>
