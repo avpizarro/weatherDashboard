@@ -28,7 +28,7 @@ form {
     margin-bottom: 20px;
 }
 
-label{
+label {
     font-weight: bold;
     font-size: 18px;
 }
@@ -82,6 +82,33 @@ tr {
     border-color: #ccc;
 }
 
+#currentDay  {
+    display: flex;
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 15px;
+    line-height: 69px;
+}
+
+img {
+    height: 50px;
+    color-adjust: 200%;
+    filter:drop-shadow(2px 4px 1px gray);
+}
+
+#weatherData {
+    margin-left:15px;
+    line-height: 24px;
+}
+
+ul {
+    margin-top: 0;
+    list-style: none;
+}
+
+li {
+    margin-top: 5px;
+}
 .label5Day {
     margin-left: 15px;
 }

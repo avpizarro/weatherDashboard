@@ -27,10 +27,10 @@ $.ajax({
     method: "GET"
   }).then(function(response) {
     console.log(response);
-    $("#currentDay").text(cities[0]+today.format("DD/MM/YYYY"));
-    $("#todayTemp").text("Temperature: " + response.main.temp);
-    $("#todayHum").text("Humidity: " + response.main.humidity);
-    $("#todayWS").text("Wind Speed: " + response.wind.speed);
+    $("#currentDay").text(cities[0]+ "  " + today.format("(DD/MM/YYYY)"));
+    $("#todayTemp").text("Temperature: " + response.main.temp + " °F");
+    $("#todayHum").text("Humidity: " + response.main.humidity + " %");
+    $("#todayWS").text("Wind Speed: " + response.wind.speed + "MPH");
     
 
     var iconURL = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
@@ -42,8 +42,6 @@ $.ajax({
 
 
 })
-// var todayQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cities[0] + "&appid=808c18e18668dc9d927127d9a72a8fb1";
-// console.log(todayQueryURL);
 // var fiveDayQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q" + cities[0] + "&appid=808c18e18668dc9d927127d9a72a8fb1";
 
 // $.ajax({
