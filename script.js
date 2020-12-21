@@ -27,8 +27,8 @@ $("button").click(function(event) {
       console.log(response);
       $("#currentDay").text(cities[0]+ "  " + today.format("(DD/MM/YYYY)"));
       $("#todayTemp").text("Temperature: " + response.main.temp + " °F");
-      $("#todayHum").text("Humidity: " + response.main.humidity + " %");
-      $("#todayWS").text("Wind Speed: " + response.wind.speed + "MPH");
+      $("#todayHum").text("Humidity: " + response.main.humidity + "%");
+      $("#todayWS").text("Wind Speed: " + response.wind.speed + " MPH");
       
 
       var iconURL = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
@@ -70,32 +70,36 @@ $("button").click(function(event) {
           todayUV.addClass("red");
         
         if (Number(response.value) >10)
-        todayUV.addClass("purple");
-        
-        
+        todayUV.addClass("purple");  
       })
 
+      var fiveDayQueryURL = "https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&exclude=current,minutely,hourly,alerts&appid=808c18e18668dc9d927127d9a72a8fb1";
+      console.log(fiveDayQueryURL);
+
+      $.ajax({
+        url: fiveDayQueryURL,
+        method: "GET"
+      }).then(function(response) {
+        console.log(response);
+
+        var forecastIconURLList = [];
+
+        for (var i=1; i<=5; i++)
+        //forecastIconURLList[i]="http://openweathermap.org/img/wn/" + response.daily[i].weather[0].icon + "@2x.png";
+        // forecastIconURL = "http://openweathermap.org/img/wn/" + response.daily[i].weather[0].icon + "@2x.png";
+        // console.log(response.daily[i].weather[0].icon);
+        // console.log(forecastIconURL);
+        //forecastIconURLList.push("http://openweathermap.org/img/wn/" + response.daily[i].weather[0].icon + "@2x.png");
+        // console.log(forecastIconURLList[4]);
+        //$("<img>").attr("src", forecastIconURLList[i-1]),
+        //console.log($("img"));
+         
+        $(".today" +[i]).append([
+          $("<div>").text(moment.unix(response.daily[i].dt).format("DD/MM/YYYY")),
+          //$("<img>").addClass("icon").attr("src", forecastIconURLList[i-1]),
+          $("<div>").text("Temp: "+response.daily[i].temp.day+" °F"),
+          $("<div>").text("Humidity: "+response.daily[i].humidity+"%")
+        ]);
+      })
   });
-
-  // var UVqueryURL = "http://api.openweathermap.org/data/2.5/uvi?lat=28.08&lon=-80.61&appid=808c18e18668dc9d927127d9a72a8fb1"
-
-
-
-  var fiveDayQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q" + cities[0] + "&appid=808c18e18668dc9d927127d9a72a8fb1";
-
-
 })
-
-// $.ajax({
-//     url: todayQueryURL,
-//     method: "GET"
-//   }).then(function(response) {
-//     console.log(response);
-// });
-
-// response.coord.lon
-// response.coord.lat
-
-// var UVqueryURL = "http://api.openweathermap.org/data/2.5/uvi?lat=28.08&lon=-80.61&appid=808c18e18668dc9d927127d9a72a8fb1"
-
-// response.value

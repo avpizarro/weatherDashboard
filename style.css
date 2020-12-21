@@ -154,5 +154,9 @@ span {
     margin-left: 15px;
     margin-bottom: 0;
     color: rgb(224, 224, 223);
+    text-align: justify;
+    line-height: 32px;
 }
+
+
 
