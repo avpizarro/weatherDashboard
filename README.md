@@ -10,11 +10,14 @@ Github repository link: 'https://github.com/avpizarro/weatherDashboard.git'
 
 ## The website helps you view the weather conditions from the cities you choose:
 
+![start](Assets/start.png)
+
+
 Choose a city to see its weather conditions and add it to your history:
 
-![city1](Assets/city1.png)
+![city](Assets/city.png)
 
-You can choose any of the cities in your history to view what the weather is going to be like:
+As you add a new city it gets added to your list:
 
-![city2](Assets/city2.png)
+![cities](Assets/cities.png)
 
