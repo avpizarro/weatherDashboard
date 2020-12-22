@@ -32,7 +32,7 @@ $("button").click(function(event) {
     $("#todayWS").text("Wind Speed: " + response.wind.speed + " MPH");
     
 
-    var iconURL = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
+    var iconURL = "https://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
     console.log(iconURL);
     $("#currentDay").append("<img>");
     $("img").attr("src", iconURL).addClass("currentIcon"); 
@@ -42,7 +42,7 @@ $("button").click(function(event) {
     console.log(lon);
     var lat = response.coord.lat;
     console.log(lat);
-    var UVqueryURL = "http://api.openweathermap.org/data/2.5/uvi?lat="+lat+"&lon="+lon+"&appid=808c18e18668dc9d927127d9a72a8fb1";
+    var UVqueryURL = "https://api.openweathermap.org/data/2.5/uvi?lat="+lat+"&lon="+lon+"&appid=808c18e18668dc9d927127d9a72a8fb1";
     console.log(UVqueryURL);
 
     $.ajax({
@@ -96,7 +96,7 @@ $("button").click(function(event) {
       ]);
 
       for (var i=1; i<=5; i++)
-      forecastIconURLList.push("http://openweathermap.org/img/wn/" + response.daily[i].weather[0].icon + "@2x.png")
+      forecastIconURLList.push("https://openweathermap.org/img/wn/" + response.daily[i].weather[0].icon + "@2x.png")
       console.log(forecastIconURLList)
       console.log(forecastIconURLList[i])
       $(".icon1").attr("src", forecastIconURLList[0]);
