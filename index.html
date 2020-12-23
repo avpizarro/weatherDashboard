@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Link pure.css  -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">   
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+        
     <!-- Link own css file -->
+    <!-- Link pure.css  -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css" />
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <title>Weather Dashboard</title> 
@@ -16,6 +17,7 @@
     <script src="https://kit.fontawesome.com/54099578c7.js" crossorigin="anonymous"></script>  
 </head>
 <body>
+
     <!-- Define the header -->
     <header class="pure-u-1">Weather Dashboard</header>
 
@@ -27,7 +29,7 @@
             <form class="pure-form">
 
                 <!-- Add the option to input a City -->
-                <div class="pure-u-1 pure-u-md-1-3 cityChoice">
+                <div class="pure-u-1 cityChoice">
                     <label for="multi-city">Search for a City:</label>
 
                     <input type="text" id="multi-city" class="pure-u-2-3" />
@@ -58,7 +60,7 @@
         <div class="pure-u-3-4">
 
             <!-- Element to display todays's weather  -->
-            <div class="pure-u-1 pure-u-md-1-3 todayResult">
+            <div class="pure-u-1 todayResult">
                 <div id="currentDay"></div>
                 <div id= "weatherData">
                     <ul>
@@ -69,18 +71,17 @@
                     </ul>
                 </div>
             </div>
-
             <!-- Add a title to the five days forecast -->
-            <label for="pure-u-1 pure-u-md-1-3" class="label5Day">5-Day Forecast:</label>
+            <label for="pure-u-1" class="label5Day">5-Day Forecast:</label>
             
             <!-- Element to display the weather forecast for the next five days -->
-            <div class="pure-u-1 pure-u-md-1-3 fiveDayForecast">
-                <div class="pure-u-1-5"><div class="forecast today1"></div></div>
-                <div class="pure-u-1-5"><div class="forecast today2"></div></div>
-                <div class="pure-u-1-5"><div class="forecast today3"></div></div>
-                <div class="pure-u-1-5"><div class="forecast today4"></div></div>
-                <div class="pure-u-1-5"><div class="forecast today5"></div></div>
-            </div>
+                <div class="pure-g fiveDayForecast">
+                    <div class="pure-u-1-5 forecastBox"><div class="forecast today1"></div></div>
+                    <div class="pure-u-1-5 forecastBox"><div class="forecast today2"></div></div>
+                    <div class="pure-u-1-5 forecastBox"><div class="forecast today3"></div></div>
+                    <div class="pure-u-1-5 forecastBox"><div class="forecast today4"></div></div>
+                    <div class="pure-u-1-5 forecastBox"><div class="forecast today5"></div></div>
+                </div>
         </div>
     </div>
 </body>

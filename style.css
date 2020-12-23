@@ -154,7 +154,7 @@ li {
     height: 178px;
 }
 
-.pure-u-1-5 {
+.forecastBox {
     background-color: rgb(15, 116, 240);
     height: 108%;
     width: 16%;
@@ -182,5 +182,17 @@ li {
     font-size: 20px;
 }
 
+@media only screen and (max-width: 1313px) {
+    .forecastBox {
+            width: 25%;
+            margin-bottom: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 840px) {
+    .forecastBox {
+            width: 45%;
+    }
+  }
 
 
