@@ -21,3 +21,8 @@ As you add a new city it gets added to your list:
 
 ![cities](Assets/cities.png)
 
+Click on any city on your list to see today's weather
+the conditions for the next five days:
+
+![listedCity](Assets/listedCity.png)
+
