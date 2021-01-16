@@ -11,14 +11,14 @@ if (localStorage.getItem("cities") !== null) {
   var cities = localStorage.getItem("cities").split(",");
 }
 
-$("#1").text(cities[0]);
-$("#2").text(cities[1]);
-$("#3").text(cities[2]);
-$("#4").text(cities[3]);
-$("#5").text(cities[4]);
-$("#6").text(cities[5]);
-$("#7").text(cities[6]);
-$("#8").text(cities[7]);
+$(".1").text(cities[0]);
+$(".2").text(cities[1]);
+$(".3").text(cities[2]);
+$(".4").text(cities[3]);
+$(".5").text(cities[4]);
+$(".6").text(cities[5]);
+$(".7").text(cities[6]);
+$(".8").text(cities[7]);
 
 //Define the API URL according to the city chosen by the user
 var todayQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cities[0] + "&units=metric&appid=808c18e18668dc9d927127d9a72a8fb1";
@@ -128,14 +128,14 @@ $("button").click(function (event) {
   var cityInput = $("input").val();
   cities.unshift(cityInput);
   $("input").val('');
-  $("#1").text(cities[0]);
-  $("#2").text(cities[1]);
-  $("#3").text(cities[2]);
-  $("#4").text(cities[3]);
-  $("#5").text(cities[4]);
-  $("#6").text(cities[5]);
-  $("#7").text(cities[6]);
-  $("#8").text(cities[7]);
+  $(".1").text(cities[0]);
+  $(".2").text(cities[1]);
+  $(".3").text(cities[2]);
+  $(".4").text(cities[3]);
+  $(".5").text(cities[4]);
+  $(".6").text(cities[5]);
+  $(".7").text(cities[6]);
+  $(".8").text(cities[7]);
 
   console.log(cityInput);
   console.log(cities);

@@ -187,6 +187,10 @@ li {
     font-size: 20px;
 }
 
+.hide {
+    display: none;
+}
+
 @media only screen and (max-width: 1313px) {
     .forecastBox {
             width: 25%;
@@ -194,11 +198,27 @@ li {
     }
   }
 
-  @media only screen and (max-width: 840px) {
+@media only screen and (max-width: 840px) {
+    .forecastBox {
+            width: 35%;
+    }
+}
+
+@media only screen and (max-width: 572px) {
     .forecastBox {
             width: 45%;
     }
-  }
+
+    table {
+        order: unset;
+    }
+}
+
+@media only screen and (max-width: 411px) {
+    header {
+        font-size: 30px;
+    }
+}
 
 
 

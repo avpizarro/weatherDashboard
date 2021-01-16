@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">  
-        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Link own css file -->
     <!-- Link pure.css  -->
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css" />
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <title>Weather Dashboard</title> 
+    <title>Weather Dashboard</title>
 
     <!-- Link font awesome to use the search icon -->
-    <script src="https://kit.fontawesome.com/54099578c7.js" crossorigin="anonymous"></script>  
-    <script src="https://kit.fontawesome.com/54099578c7.js" crossorigin="anonymous"></script>  
+    <script src="https://kit.fontawesome.com/54099578c7.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/54099578c7.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
     <!-- Define the header -->
@@ -25,7 +27,7 @@
     <div class="pure-g">
 
         <!-- Create the side column -->
-        <div class="pure-u-1-4">
+        <div class="pure-u-1 pure-u-sm-1-4">
             <form class="pure-form">
 
                 <!-- Add the option to input a City -->
@@ -42,14 +44,30 @@
                 <!-- Add a table to store the City values inputed -->
                 <table class="pure-table pure-table-bordered">
                     <tbody>
-                        <tr><td id="1"></td></tr>
-                        <tr><td id="2"></td></tr>
-                        <tr><td id="3"></td></tr>
-                        <tr><td id="4"></td></tr>
-                        <tr><td id="5"></td></tr>
-                        <tr><td id="6"></td></tr>
-                        <tr><td id="7"></td></tr>
-                        <tr><td id="8"></td></tr>
+                        <tr>
+                            <td class="1"></td>
+                        </tr>
+                        <tr>
+                            <td class="2"></td>
+                        </tr>
+                        <tr>
+                            <td class="3"></td>
+                        </tr>
+                        <tr>
+                            <td class="4"></td>
+                        </tr>
+                        <tr>
+                            <td class="5"></td>
+                        </tr>
+                        <tr>
+                            <td class="6"></td>
+                        </tr>
+                        <tr>
+                            <td class="7"></td>
+                        </tr>
+                        <tr>
+                            <td class="8"></td>
+                        </tr>
                     </tbody>
                 </table>
             </form>
@@ -57,35 +75,49 @@
         </div>
 
         <!-- Create the left column to display the results -->
-        <div class="pure-u-3-4">
+        <div class="pure-u-1 pure-u-sm-3-4">
 
             <!-- Element to display todays's weather  -->
             <div class="pure-u-1 todayResult">
                 <div id="currentDay"></div>
-                <div id= "weatherData">
+                <div id="weatherData">
                     <ul>
-                        <li id="todayTemp" ></li>
-                        <li id="todayHum" ></li>
-                        <li id="todayWS" ></li>
-                        <li id="todayUV" ></li>
+                        <li id="todayTemp"></li>
+                        <li id="todayHum"></li>
+                        <li id="todayWS"></li>
+                        <li id="todayUV"></li>
                     </ul>
                 </div>
             </div>
             <!-- Add a title to the five days forecast -->
             <label for="pure-u-1" class="label5Day">5-Day Forecast:</label>
-            
+
             <!-- Element to display the weather forecast for the next five days -->
+            <div class="pure-u-1 fiveDayContainer">
                 <div class="pure-g fiveDayForecast">
-                    <div class="pure-u-1-5 forecastBox"><div class="forecast today1"></div></div>
-                    <div class="pure-u-1-5 forecastBox"><div class="forecast today2"></div></div>
-                    <div class="pure-u-1-5 forecastBox"><div class="forecast today3"></div></div>
-                    <div class="pure-u-1-5 forecastBox"><div class="forecast today4"></div></div>
-                    <div class="pure-u-1-5 forecastBox"><div class="forecast today5"></div></div>
+                    <div class="pure-u-1-5 forecastBox">
+                        <div class="forecast today1"></div>
+                    </div>
+                    <div class="pure-u-1-5 forecastBox">
+                        <div class="forecast today2"></div>
+                    </div>
+                    <div class="pure-u-1-5 forecastBox">
+                        <div class="forecast today3"></div>
+                    </div>
+                    <div class="pure-u-1-5 forecastBox">
+                        <div class="forecast today4"></div>
+                    </div>
+                    <div class="pure-u-1-5 forecastBox">
+                        <div class="forecast today5"></div>
+                    </div>
                 </div>
+            </div>
+
         </div>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="script.js"></script>
+
 </html>
