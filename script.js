@@ -126,6 +126,8 @@ $.ajax({
 $("button").click(function (event) {
   event.preventDefault();
   var cityInput = $("input").val();
+
+  if (cityInput) {
   cities.unshift(cityInput);
   $("input").val('');
   $(".1").text(cities[0]);
@@ -136,7 +138,7 @@ $("button").click(function (event) {
   $(".6").text(cities[5]);
   $(".7").text(cities[6]);
   $(".8").text(cities[7]);
-
+  }
   console.log(cityInput);
   console.log(cities);
 
